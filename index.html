@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>高塔指南</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous" 
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    :root {
+      --primary: #032d5e;
+      --font-family:'Shippori Mincho', serif;
+    }
+
+    * {
+      font-family: var(--font-family);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .bs-primary {
+      background-color: var(--primary);
+    }
+
+    /* Nav */
+
+    nav ul a::after {
+      content: " ";
+      display: block;
+      width: 0%;
+      height: 1px;
+      background-color: rgb(0, 0, 0);
+      transition: 0.4s 0.2s;
+    }
+
+    nav ul a:hover::after {
+      width: 100%;
+    }
+
+    /* 配信者 */
+
+    .creator {
+      background-image: url("https://tv.eldoahblog.com/wp-content/uploads/2021/01/2-2.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: rgba(0, 0, 0, 0.08);
+      background-blend-mode: overlay;
+      color: white;
+      font-weight: 600;
+      height: 15rem;
+    }
+
+    .creator:hover {
+      background-color: rgba(0, 0, 0, 0.01);
+      background-blend-mode: overlay;
+    }
+
+    .creator:nth-of-type(even) {
+      background-image: url("https://tv.eldoahblog.com/wp-content/uploads/2021/01/4-1.png");
+    }
+
+    .logo img {
+      max-width: 100px;
+    }
+
+    .creatorlistBtn {
+      text-decoration: none;
+      background-color: var(--primary);
+      padding: 1.2rem 1.8rem;
+      border-radius: 3rem;
+      color: white;
+    }
+
+    .creatorlistBtn:hover {
+      background-color: #cea068;
+      color: white;
+    }
+
+    .liveBtn {
+      right: 3%;
+      text-decoration: none;
+      color: white;
+    }
+
+    .liveBtn:hover {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* footer */
+    .sns img {
+      max-height: 80px;
+    }
+  </style>
+
+  <body>
+    <!-- bootstrap js cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <nav
+      class="w-100 text-uppercase py-2 d-flex align-items-center justify-content-around"
+    >
+      <a
+        href="https://alowko.wordpress.com/"
+        target="_blank"
+        class="text-decoration-none logo"
+        ><img
+          src="https://alowko.files.wordpress.com/2022/05/tower_logo.png"
+          alt=""
+          style="padding-left: 1rem"
+      /></a>
+      <ul
+        class="h-100 w-100 d-flex justify-content-evenly align-items-center list-unstyled mb-2"
+      >
+        <a
+          href="https://alowko.wordpress.com/work-tower/"
+          target="_blank"
+          class="text-decoration-none text-dark"
+        >
+          <li>高塔本部</li>
+        </a>
+        <a
+          href="https://alowko.wordpress.com/2020/10/12/%e9%ab%98%e5%a1%94%e8%a8%ad%e5%ae%9a%e9%9b%86/"
+          target="_blank"
+          class="text-decoration-none text-dark"
+        >
+          <li>部門總覽</li>
+        </a>
+        <a
+          href="https://alowko.wordpress.com/2020/10/12/%e9%ab%98%e5%a1%94%e8%a8%ad%e5%ae%9a%e9%9b%86/"
+          target="_blank"
+          class="text-decoration-none text-dark"
+        >
+          <li>新兵指南</li>
+        </a>
+        <a
+          href="http://"
+          target="_blank"
+          class="text-decoration-none text-dark"
+        >
+          <li>孵化者資料庫</li>
+        </a>
+      </ul>
+    </nav>
+    <header class="headerSlide container-md">
+      <div class="row">
+        <img
+          src="https://alowko.files.wordpress.com/2022/01/20211122e69d8fe38195e38284.png?w=1024"
+          alt=""
+        />
+      </div>
+    </header>
+    <main>
+      <!-- 世界観紹介 -->
+      <div
+        class="eldoahWeek d-flex flex-column justify-content-center align-items-center container my-5"
+      >
+        <h2 class="mb-0 py-5 fs-3 fw-bolder">
+          「舉起汝的靈魂之樽，讓我等在圓環的盛宴共飲命運。」
+        </h2>
+        <div
+          class="eldoahWeekArticle d-flex flex-column justify-content-center align-items-center my-5 container"
+        >
+          <p class="mb-5">「看得見我的話，就表示你也有成為哨兵或是嚮導的資質呢。」</p>
+          <p class="lh-lg text-center">
+            白色小獸擺著蓬鬆的尾巴，眨著紅寶石般的雙眼，如是說道。
+          </p>
+          <p class="lh-lg text-center">
+            ライブゲームの生放送から、初心者でも分かりやすいエルドアカジノの紹介まで、
+            様々な動画が配信されます。
+          </p>
+        </div>
+      </div>
+      <div class="threePoints container-fulid my-5 mx-5">
+        <div class="row gx-5">
+          <div
+            class="point col-lg-4 d-flex flex-column justify-content-start align-items-center"
+          >
+            <img
+              src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_260,h_260/https://tv.eldoahblog.com/wp-content/uploads/2021/01/1-4.png"
+              alt=""
+              class="mb-5"
+            />
+            <p class="fs-2 pointTitle mt-4 fw-bold">人気YT大集結</p>
+            <p class="fs-4 subtitle">人気配信者がELDOAH WEEKに参戦！</p>
+            <p class="fs-6 pointContent">
+              庶民的なぎら、カボチャ、カジパラ、めちゃシコ、ノニコム、寝る前にch、VITOなどなど、今人気のオンラインカジノ配信者22名がELDOAH
+              WEEKに参戦！
+            </p>
+          </div>
+          <div
+            class="point col-lg-4 d-flex flex-column justify-content-start align-items-center"
+          >
+            <img
+              src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_260,h_260/https://tv.eldoahblog.com/wp-content/uploads/2021/01/2-1.png"
+              alt=""
+              class="mb-5"
+            />
+            <p class="fs-2 pointTitle mt-4 fw-bold">毎日ライブ配信</p>
+            <p class="fs-4 subtitle">毎日19時~21時Youtubeで楽しめる！</p>
+            <p class="fs-6 pointContent">
+              1/18 -
+              1/24毎日動画、もしくはライブ配信を楽しめる！オンラインカジノで、面白い動画がたくさんある！必ず番組表をチェック！
+            </p>
+          </div>
+          <div
+            class="point col-lg-4 d-flex flex-column justify-content-start align-items-center"
+          >
+            <img
+              src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_260,h_260/https://tv.eldoahblog.com/wp-content/uploads/2021/01/3-1.png"
+              alt=""
+              class="mb-5"
+            />
+            <p class="fs-2 pointTitle mt-4 fw-bold">独創的な企画！</p>
+            <p class="fs-4 subtitle">他にはない面白い企画動画！</p>
+            <p class="fs-6 pointContent">
+              「3万円を1時間でどれだけ増やせるかチャレンジ」、「丁半バカラ」などなど、面白いコンテンツが配信されます。ライブ配信で、それぞれの配信者のプレイを見ることも出来る！
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 人物介紹 -->
+      <div
+        class="creatorTitle d-flex flex-column justify-content-center align-items-center container mb-5"
+      >
+        <p class="mb-0 py-3 fs-1 fw-bold">CREATOR</p>
+        <div
+          class="creatorArticle d-flex flex-column justify-content-center align-items-center my-5 container"
+        >
+          <p class="mb-5">配信者</p>
+          <p class="lh-lg w-80 text-center">
+            今回ご参加された22名の配信者をご紹介します。<br />ライブゲームに特化したチャンネルから、毎日ライブ配信を行っている方まで、今人気の配信者が大集合！<br />それぞれ配信者の動画や生放送をぜひご覧ください。
+          </p>
+        </div>
+      </div>
+      <div class="wrap container">
+        <div class="row">
+          <!--  carousel Eldoah creators -->
+          <div
+            id="carousel1"
+            class="carousel slide col-lg-6"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active bg-dark" data-bs-interval="3000">
+                <a
+                  href="https://zukan.pokemon.co.jp/detail/172"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/78023852b48998ab5681e1bdc0d6333a.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-dark" data-bs-interval="3000">
+                <a
+                  href="https://zukan.pokemon.co.jp/detail/025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/5bb0cfd44302cd4df0c0c88d37457931.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-dark" data-bs-interval="3000">
+                <a
+                  href="https://zukan.pokemon.co.jp/detail/026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/b044779bd695701e03dd7b3bc83421e9.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+
+              <div class="carousel-item bg-dark" data-bs-interval="3000">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/7b705082db2e24dd4ba25166dac84e0a.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-dark" data-bs-interval="3000">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/89953014f442146518ef45787d9bb0a4.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-dark" data-bs-interval="3000">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/17388b7f608671656716ab509ee0fa05.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-dark" data-bs-interval="3000">
+                <a href="http://" target="_blank" rel="noopener noreferrer"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/416c144def923f44d8d0ca7e79405fa0.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel1"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!--  carousel Wonder creators -->
+          <div
+            id="carousel2"
+            class="carousel slide col-lg-6"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active bg-danger"
+                data-bs-interval="3000"
+              >
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/ce7a495289998df2591b160b05db6ab2.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-danger" data-bs-interval="3000">
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/185e0940b953a8bbee052540ab80e229.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-danger" data-bs-interval="3000">
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/3c882f8bd3ada9d4f19a0f15d7cde3e1.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-danger" data-bs-interval="3000">
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/6c42e79afa1fec8ea8eb44156c2c41ea.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-danger" data-bs-interval="3000">
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/848e443ca0d74b92e05ccbee596fbb9e.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-danger" data-bs-interval="3000">
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/6cf57d3e35f8fa5254cb5169fdf096e8.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+              <div class="carousel-item bg-danger" data-bs-interval="3000">
+                <a href="#" target="_blank"
+                  ><img
+                    src="https://zukan.pokemon.co.jp/zukan-api/up/images/index/0cb34207f244ddb0316bae53ce8652d5.png"
+                    class="d-block w-100"
+                    alt="..."
+                /></a>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carousel2"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--carousel creators end -->
+      <div class="d-flex justify-content-center my-5">
+        <a
+          class="creatorlistBtn"
+          href="http://"
+          target="_blank"
+          rel="noopener noreferrer"
+          >指引</a
+        >
+      </div>
+
+      <!-- 番組表 -->
+      <div
+        class="creatorTitle d-flex flex-column justify-content-center align-items-center container mb-5"
+      >
+        <p class="mb-0 py-3 fs-1 fw-bold">SCHEDULE</p>
+        <div
+          class="creatorArticle d-flex flex-column justify-content-center align-items-center my-5 container"
+        >
+          <p class="mb-5">番組表</p>
+          <p class="lh-lg w-80 text-center">
+            今回ご参加された22名の配信者をご紹介します。<br />ライブゲームに特化したチャンネルから、毎日ライブ配信を行っている方まで、今人気の配信者が大集合！<br />それぞれ配信者の動画や生放送をぜひご覧ください。
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="sns my-5">
+        <p class="fs-5 fw-bold text-center mb-3">高塔小報</p>
+        <div class="snsWrap d-flex justify-content-center">
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            ><img
+              src="https://tv.eldoahblog.com/wp-content/uploads/2021/01/twitter.png"
+              alt=""
+          /></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            ><img
+              src="https://tv.eldoahblog.com/wp-content/uploads/2021/01/telegram.png"
+              alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="copyright w-100 m-0 p-0">
+        <p class="text-light bs-primary mb-0 py-3 text-center">
+          Copyright © 2019
+        </p>
+      </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
